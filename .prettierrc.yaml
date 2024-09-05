@@ -1,0 +1,7 @@
+singleQuote: true
+semi: false
+# # Default values (https://prettier.io/docs/en/options)
+#   endOfLine: "lf",
+#   printWidth: 80,
+#   tabWidth: 2,
+#   useTabs: false
