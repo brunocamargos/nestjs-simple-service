@@ -32,11 +32,13 @@
 $ npm install
 ```
 
-Install [yamllint](https://yamllint.readthedocs.io/en/stable/quickstart.html) as well
+Install [yamllint](https://yamllint.readthedocs.io/en/stable/quickstart.html) to lint yaml files
 ´´´bash
 sudo apt install yamllint
 
 ````
+
+Install [pgAdmin](https://www.pgadmin.org/download/pgadmin-4-apt/) to manage postgreSQL
 
 ## Compile and run the project
 
