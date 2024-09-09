@@ -32,6 +32,12 @@
 $ npm install
 ```
 
+Install [yamllint](https://yamllint.readthedocs.io/en/stable/quickstart.html) as well
+´´´bash
+sudo apt install yamllint
+
+````
+
 ## Compile and run the project
 
 ```bash
@@ -43,7 +49,7 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
-```
+````
 
 ## Run tests
 

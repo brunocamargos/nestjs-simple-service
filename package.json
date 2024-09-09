@@ -9,6 +9,7 @@
     "build": "nest build",
     "lint-staged": "lint-staged",
     "format": "prettier --write .",
+    "yamllint": "yamllint .",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
