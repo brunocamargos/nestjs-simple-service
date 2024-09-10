@@ -1,10 +1,11 @@
-import globals from 'globals'
-import eslint from '@eslint/js'
-import tseslint from 'typescript-eslint'
 import eslintConfigPrettier from 'eslint-config-prettier'
-import pluginSecurity from 'eslint-plugin-security'
 import jestPlugin from 'eslint-plugin-jest'
 import nodePlugin from 'eslint-plugin-n'
+import pluginSecurity from 'eslint-plugin-security'
+import globals from 'globals'
+import tseslint from 'typescript-eslint'
+
+import eslint from '@eslint/js'
 
 export default tseslint.config(
   eslint.configs.recommended,
@@ -18,19 +19,19 @@ export default tseslint.config(
     languageOptions: { globals: globals.node },
     rules: {
       'n/no-missing-import': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          args: 'all',
+          argsIgnorePattern: '^_',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+        },
+      ],
     },
   },
   { ignores: ['dist', 'coverage'] },
 )
-
-// without typescript support (tseslint.config)
-// export default [
-//   {
-//     files: ['**/*.{js,mjs,cjs,ts}'],
-//   },
-//   { languageOptions: { globals: globals.node } },
-//   { ignores: ['dist', 'coverage'] },
-//   pluginJs.configs.recommended,
-//   ...tseslint.configs.recommended,
-//   eslintConfigPrettier,
-// ]

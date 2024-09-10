@@ -1,6 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common'
+
+import { CreateCoffeeDto, UpdateCoffeeDto } from './dto'
 import { Coffee } from './entities'
-import { CreateCoffeeDto } from './dto'
 
 @Injectable()
 export class CoffeesService {
@@ -29,7 +30,7 @@ export class CoffeesService {
     this.coffees.push({ ...createCoffeeDto, id: 2 })
   }
 
-  update(id: string) {
+  update(id: string, _updateCoffeeDto: UpdateCoffeeDto) {
     const existingCoffee = this.findOne(id)
     if (existingCoffee) {
       // update it

@@ -1,5 +1,15 @@
 singleQuote: true
 semi: false
+plugins:
+  - '@trivago/prettier-plugin-sort-imports'
+importOrderParserPlugins:
+  - 'typescript'
+  - 'decorators-legacy'
+importOrderSeparation: true
+importOrderSortSpecifiers: true
+importOrder:
+  - '^@(.*)$'
+  - '^[./]'
 # # Default values (https://prettier.io/docs/en/options)
 #   endOfLine: "lf",
 #   printWidth: 80,
