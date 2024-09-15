@@ -16,7 +16,7 @@ export class Coffee {
   @Column()
   name: string
 
-  @Column()
+  @Column({ nullable: true })
   brand: string
 
   @Column({ default: 0 })
