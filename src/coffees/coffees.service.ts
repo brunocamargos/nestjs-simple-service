@@ -3,6 +3,7 @@ import { Event } from 'src/events'
 import { DataSource, Repository } from 'typeorm'
 
 import { Injectable, NotFoundException } from '@nestjs/common'
+import { ConfigService } from '@nestjs/config'
 import { InjectRepository } from '@nestjs/typeorm'
 
 import { CreateCoffeeDto, UpdateCoffeeDto } from './dto'
@@ -17,7 +18,11 @@ export class CoffeesService {
     @InjectRepository(Flavor)
     private readonly flavorRepository: Repository<Flavor>,
     private readonly dataSource: DataSource,
-  ) {}
+    private readonly configService: ConfigService,
+  ) {
+    const databaseHost = this.configService.get<string>('DATABASE_HOST')
+    console.log(databaseHost)
+  }
 
   findAll(paginationQuery: PaginationQueryDto) {
     const { limit, offset } = paginationQuery
