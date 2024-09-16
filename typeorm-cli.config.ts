@@ -1,5 +1,6 @@
-import { Coffee, Flavor } from 'src/coffees/entities'
 import { DataSource } from 'typeorm'
+
+import { Coffee, Flavor } from 'src/coffees/entities'
 
 export default new DataSource({
   type: 'postgres',

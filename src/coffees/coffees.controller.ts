@@ -1,5 +1,3 @@
-import { PaginationQueryDto } from 'src/common'
-
 import {
   Body,
   Controller,
@@ -10,6 +8,8 @@ import {
   Post,
   Query,
 } from '@nestjs/common'
+
+import { PaginationQueryDto } from 'src/common'
 
 import { CoffeesService } from './coffees.service'
 import { CreateCoffeeDto, UpdateCoffeeDto } from './dto'
