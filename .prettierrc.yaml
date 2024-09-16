@@ -9,6 +9,7 @@ importOrderSeparation: true
 importOrderSortSpecifiers: true
 importOrder:
   - '^@(.*)$'
+  - '^src(.*)$'
   - '^[./]'
 # # Default values (https://prettier.io/docs/en/options)
 #   endOfLine: "lf",
